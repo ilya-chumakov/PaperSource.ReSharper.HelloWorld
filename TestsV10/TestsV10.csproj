@@ -146,7 +146,9 @@
     <Compile Include="NullObjectContextActionTests.cs" />
     <Compile Include="TestEnvironmentZone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="test\data\NullObjectContextActionTests\Test_ListOfBar_Success.cs" />
     <None Include="test\data\NullObjectContextActionTests\Test_ListOfInt_Success.cs" />
+    <None Include="test\data\NullObjectContextActionTests\Test_ListOfBar_Success.cs.gold" />
     <None Include="test\data\NullObjectContextActionTests\Test_ListOfObject_Success.cs" />
     <None Include="test\data\NullObjectContextActionTests\Test_ListOfInt_Success.cs.gold" />
     <None Include="test\data\NullObjectContextActionTests\Test_Fail.cs" />

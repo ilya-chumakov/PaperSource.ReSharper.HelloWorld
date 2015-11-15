@@ -24,6 +24,12 @@ namespace TestsV10
 		}
 
 		[Test]
+		public void Test_ListOfBar_Success()
+		{
+			DoTestFiles("Test_ListOfBar_Success.cs");
+		}
+
+		[Test]
 		public void Test_Fail()
 		{
 			DoTestFiles("Test_Fail.cs");
