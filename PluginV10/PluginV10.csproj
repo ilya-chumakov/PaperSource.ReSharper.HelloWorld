@@ -202,4 +202,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+	<PropertyGroup>
+		<HostFullIdentifier>ReSharperPlatformVs14Rv10</HostFullIdentifier>
+	</PropertyGroup>
 </Project>
