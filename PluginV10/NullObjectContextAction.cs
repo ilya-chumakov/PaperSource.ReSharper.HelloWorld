@@ -117,7 +117,11 @@ namespace ReSharper.PackageV3
 			{
 				IDeclaredType declaredType = method.DeclaredElement.ReturnType as IDeclaredType;
 
+				if (declaredType == null || declaredType.IsVoid()) return false;
+
 				ISubstitution sub = declaredType.GetSubstitution();
+
+				if (sub.IsEmpty()) return false;
 
 				IType  parameterType = sub.Apply(sub.Domain[0]);
 
