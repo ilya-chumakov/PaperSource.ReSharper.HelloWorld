@@ -12,9 +12,15 @@ namespace TestsV10
 		protected override string RelativeTestDataPath => "NullObjectContextActionTests";
 
 		[Test]
-		public void Test_Execute()
+		public void Test_ListOfObject_Success()
 		{
-			DoTestFiles("Test_Execute.cs");
+			DoTestFiles("Test_ListOfObject_Success.cs");
+		}
+
+		[Test]
+		public void Test_ListOfInt_Success()
+		{
+			DoTestFiles("Test_ListOfInt_Success.cs");
 		}
 
 		[Test]

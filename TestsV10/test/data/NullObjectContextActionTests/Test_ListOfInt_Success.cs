@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace N
 {
 	public class C
 	{
-		public List<object> FooObj()
+		public List<int> FooMethod()
 	    {
-			return {caret}new List<object>();
+			return {caret}null;
 	    }
 	}
 }

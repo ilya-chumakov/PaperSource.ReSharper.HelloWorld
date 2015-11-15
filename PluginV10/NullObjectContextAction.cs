@@ -17,7 +17,7 @@ using JetBrains.Util;
 
 namespace ReSharper.PackageV3
 {
-	[ContextAction(Group = "C#", Name = "context action V3", Description = "something new")]
+	[ContextAction(Group = "C#", Name = "Null Object Action", Description = "something new")]
 	public class NullObjectContextAction : ContextActionBase
 	{
 		public ICSharpContextActionDataProvider Provider { get; set; }
@@ -27,7 +27,7 @@ namespace ReSharper.PackageV3
 			Provider = provider;
 		}
 
-		public override string Text { get; } = "Null Object Action";
+		public override string Text { get; } = "Introduce Null Object";
 
 		protected override Action<ITextControl> ExecutePsiTransaction(ISolution solution, IProgressIndicator progress)
 		{
@@ -115,6 +115,12 @@ namespace ReSharper.PackageV3
 		{
 			try
 			{
+				IDeclaredType declaredType = method.DeclaredElement.ReturnType as IDeclaredType;
+
+				ISubstitution sub = declaredType.GetSubstitution();
+
+				IType  parameterType = sub.Apply(sub.Domain[0]);
+
 				IMethod declaredElement = method.DeclaredElement;
 
 				IType realType = declaredElement.Type();
@@ -122,8 +128,6 @@ namespace ReSharper.PackageV3
 				var predefinedType = declaredElement.Module.GetPredefinedType();
 
 				ITypeElement generic = predefinedType.GenericList.GetTypeElement();
-
-				IDeclaredType parameterType = TypeFactory.CreateType(predefinedType.Object.GetTypeElement());
 
 				IType sampleType = EmptySubstitution.INSTANCE
 					.Extend(generic.TypeParameters, new IType[] { parameterType })

@@ -146,13 +146,15 @@
     <Compile Include="NullObjectContextActionTests.cs" />
     <Compile Include="TestEnvironmentZone.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="test\data\NullObjectContextActionTests\Test_Execute.cs" />
+    <None Include="test\data\NullObjectContextActionTests\Test_ListOfInt_Success.cs" />
+    <None Include="test\data\NullObjectContextActionTests\Test_ListOfObject_Success.cs" />
+    <None Include="test\data\NullObjectContextActionTests\Test_ListOfInt_Success.cs.gold" />
     <None Include="test\data\NullObjectContextActionTests\Test_Fail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="test\data\nuget.config" />
-    <None Include="test\data\NullObjectContextActionTests\Test_Execute.cs.gold" />
+    <None Include="test\data\NullObjectContextActionTests\Test_ListOfObject_Success.cs.gold" />
     <None Include="test\data\NullObjectContextActionTests\Test_Fail.cs.gold" />
   </ItemGroup>
   <ItemGroup>

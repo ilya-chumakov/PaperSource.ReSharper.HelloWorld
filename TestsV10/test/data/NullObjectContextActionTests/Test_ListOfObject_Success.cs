@@ -5,7 +5,7 @@ namespace N
 {
 	public class C
 	{
-		public List<object> FooObj()
+		public List<object> FooMethod()
 	    {
 			return {caret}null;
 	    }
