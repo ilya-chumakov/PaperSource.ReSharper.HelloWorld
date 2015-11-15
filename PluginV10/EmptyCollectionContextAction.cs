@@ -40,19 +40,19 @@ namespace ReSharper.PackageV3
 		{
 			try
 			{
-				var method = Provider.GetSelectedElement<IMethodDeclaration>();
+				IMethodDeclaration method = Provider.GetSelectedElement<IMethodDeclaration>();
 
-				var type = method.DeclaredElement.ReturnType;
+				IType type = method.DeclaredElement.ReturnType;
 
 				string typePresentableName = type.GetPresentableName(CSharpLanguage.Instance);
 
-				var factory = CSharpElementFactory.GetInstance(Provider.PsiModule);
+				CSharpElementFactory factory = CSharpElementFactory.GetInstance(Provider.PsiModule);
 
 				string code = $"new {typePresentableName}()";
 
 				ICSharpExpression newExpression = factory.CreateExpression(code);
 
-				var returnStatement = Provider.GetSelectedElement<IReturnStatement>(false);
+				IReturnStatement returnStatement = Provider.GetSelectedElement<IReturnStatement>(false);
 
 				returnStatement.SetValue(newExpression);
 			}
@@ -67,15 +67,15 @@ namespace ReSharper.PackageV3
 		{
 			try
 			{
-				var method = Provider.GetSelectedElement<IMethodDeclaration>();
+				IMethodDeclaration method = Provider.GetSelectedElement<IMethodDeclaration>();
 
-				bool insideMethod = method != null;
+				bool insideOfMethod = method != null;
 
-				if (insideMethod)
+				if (insideOfMethod)
 				{
-					bool isGenericList = CorrectReturnType(method);
+					bool returnsNull = ReturnsNullOrEmpty();
 
-					bool returnsNull = ReturnsNull();
+					bool isGenericList = CorrectReturnType(method);
 
 					return returnsNull && isGenericList;
 				}
@@ -89,11 +89,11 @@ namespace ReSharper.PackageV3
 			}
 		}
 
-		private bool ReturnsNull()
+		private bool ReturnsNullOrEmpty()
 		{
 			try
 			{
-				var returnStatement = Provider.GetSelectedElement<IReturnStatement>(false);
+				IReturnStatement returnStatement = Provider.GetSelectedElement<IReturnStatement>(false);
 
 				if (returnStatement != null)
 				{
@@ -129,7 +129,7 @@ namespace ReSharper.PackageV3
 
 				IType realType = declaredElement.Type();
 
-				var predefinedType = declaredElement.Module.GetPredefinedType();
+				PredefinedType predefinedType = declaredElement.Module.GetPredefinedType();
 
 				ITypeElement generic = predefinedType.GenericList.GetTypeElement();
 
