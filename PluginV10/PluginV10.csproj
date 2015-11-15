@@ -147,7 +147,7 @@
     <Content Include="NuGetCommands.txt" />
     <Compile Include="SimpleFix.cs" />
     <Compile Include="ZoneMarker.cs" />
-    <Compile Include="NullObjectContextAction.cs" />
+    <Compile Include="EmptyCollectionContextAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -202,7 +202,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-	<PropertyGroup>
-		<HostFullIdentifier>ReSharperPlatformVs14Rv10</HostFullIdentifier>
-	</PropertyGroup>
+  <PropertyGroup>
+    <HostFullIdentifier>ReSharperPlatformVs14Rv10</HostFullIdentifier>
+  </PropertyGroup>
 </Project>

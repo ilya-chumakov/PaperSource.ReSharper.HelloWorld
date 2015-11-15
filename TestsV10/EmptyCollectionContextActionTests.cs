@@ -5,11 +5,11 @@ using ReSharper.PackageV3;
 namespace TestsV10
 {
 	[TestFixture]
-	public class NullObjectContextActionTests : CSharpContextActionExecuteTestBase<NullObjectContextAction>
+	public class EmptyCollectionContextActionTests : CSharpContextActionExecuteTestBase<EmptyCollectionContextAction>
 	{
-		protected override string ExtraPath => "NullObjectContextActionTests";
+		protected override string ExtraPath => "EmptyCollectionContextActionTests";
 
-		protected override string RelativeTestDataPath => "NullObjectContextActionTests";
+		protected override string RelativeTestDataPath => "EmptyCollectionContextActionTests";
 
 		[Test]
 		public void Test_ListOfObject_Success()

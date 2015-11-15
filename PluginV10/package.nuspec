@@ -3,7 +3,7 @@
 <package>
 	<metadata>
 		<id>PaperSource.ReSharper.HelloWorld</id>
-		<version>1.0.4</version>
+		<version>1.0.5</version>
 		<authors>You</authors>
 		<owners>You</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -17,17 +17,17 @@ using JetBrains.Util;
 
 namespace ReSharper.PackageV3
 {
-	[ContextAction(Group = "C#", Name = "Null Object Action", Description = "something new")]
-	public class NullObjectContextAction : ContextActionBase
+	[ContextAction(Group = "C#", Name = "Empty Collection Action", Description = "something new")]
+	public class EmptyCollectionContextAction : ContextActionBase
 	{
 		public ICSharpContextActionDataProvider Provider { get; set; }
 
-		public NullObjectContextAction(ICSharpContextActionDataProvider provider)
+		public EmptyCollectionContextAction(ICSharpContextActionDataProvider provider)
 		{
 			Provider = provider;
 		}
 
-		public override string Text { get; } = "Introduce Null Object";
+		public override string Text { get; } = "Return empty collection";
 
 		protected override Action<ITextControl> ExecutePsiTransaction(ISolution solution, IProgressIndicator progress)
 		{
