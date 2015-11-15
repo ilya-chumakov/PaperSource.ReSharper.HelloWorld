@@ -99,7 +99,7 @@ namespace ReSharper.PackageV3
 				{
 					ICSharpExpression value = returnStatement.Value;
 
-					return value.ConstantValue.IsPureNull(CSharpLanguage.Instance);
+					return value == null || value.ConstantValue.IsPureNull(CSharpLanguage.Instance);
 				}
 
 				return false;
