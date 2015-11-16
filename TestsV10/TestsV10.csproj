@@ -146,17 +146,17 @@
     <Compile Include="EmptyCollectionContextActionTests.cs" />
     <Compile Include="TestEnvironment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfBar_Success.cs" />
-    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfInt_Success.cs" />
-    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfBar_Success.cs.gold" />
-    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfObject_Success.cs" />
-    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfInt_Success.cs.gold" />
     <None Include="test\data\EmptyCollectionContextActionTests\Test_Fail.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="test\data\nuget.config" />
+    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfBar_Success.cs" />
+    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfBar_Success.cs.gold" />
+    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfInt_Success.cs" />
+    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfInt_Success.cs.gold" />
+    <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfObject_Success.cs" />
     <None Include="test\data\EmptyCollectionContextActionTests\Test_ListOfObject_Success.cs.gold" />
+    <None Include="test\data\nuget.config" />
     <None Include="test\data\EmptyCollectionContextActionTests\Test_Fail.cs.gold" />
   </ItemGroup>
   <ItemGroup>

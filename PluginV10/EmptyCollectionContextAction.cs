@@ -115,7 +115,9 @@ namespace ReSharper.PackageV3
 		{
 			try
 			{
-				IDeclaredType declaredType = method.DeclaredElement.ReturnType as IDeclaredType;
+				IMethod declaredElement = method.DeclaredElement;
+
+				IDeclaredType declaredType = declaredElement?.ReturnType as IDeclaredType;
 
 				if (declaredType == null || declaredType.IsVoid()) return false;
 
@@ -124,8 +126,6 @@ namespace ReSharper.PackageV3
 				if (sub.IsEmpty()) return false;
 
 				IType  parameterType = sub.Apply(sub.Domain[0]);
-
-				IMethod declaredElement = method.DeclaredElement;
 
 				IType realType = declaredElement.Type();
 
